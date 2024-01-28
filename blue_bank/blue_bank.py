@@ -52,3 +52,6 @@ plt.show()
 
 plt.scatter(data['dti'], data['annual.income'], color = 'black')
 plt.show()
+
+# saving data to csv
+data.to_csv('data/blue_bank_final.csv')
