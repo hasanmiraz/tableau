@@ -47,9 +47,9 @@ title_neutral_sentiment = []
 for title in data['title']:
     try:
         sentiment = sent_analyzer.polarity_scores(title)
-        title_positive_sentiment.append(sentiment['pos'])
-        title_negative_sentiment.append(sentiment['neg'])
-        title_neutral_sentiment.append(sentiment['neu'])
+        title_positive_sentiment.append(round(sentiment['pos'], 2))
+        title_negative_sentiment.append(round(sentiment['neg'], 2))
+        title_neutral_sentiment.append(round(sentiment['neu'], 2))
     except:
         title_positive_sentiment.append(0)
         title_negative_sentiment.append(0)
